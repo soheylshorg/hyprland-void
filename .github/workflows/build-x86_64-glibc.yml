@@ -119,11 +119,11 @@ jobs:
         run: |
           mkdir ~/packages
           cp ~/hostdir/binpkgs/zen-browser*.xbps ~/packages
-          cp ~/hostdir/binpkgs/aquamarine*.xbps ~/packages
-          cp ~/hostdir/binpkgs/hypr*.xbps ~/packages
-          cp ~/hostdir/binpkgs/xdg-desktop-portal-hyprland*.xbps ~/packages
-          cp ~/hostdir/binpkgs/sdbus-cpp*.xbps ~/packages
-          cp ~/hostdir/binpkgs/tomlplusplus*.xbps ~/packages
+          #cp ~/hostdir/binpkgs/aquamarine*.xbps ~/packages 
+          #cp ~/hostdir/binpkgs/hypr*.xbps ~/packages
+          #cp ~/hostdir/binpkgs/xdg-desktop-portal-hyprland*.xbps ~/packages
+          #cp ~/hostdir/binpkgs/sdbus-cpp*.xbps ~/packages
+          #cp ~/hostdir/binpkgs/tomlplusplus*.xbps ~/packages 
           cd ~/packages
           xbps-rindex -a *
 
