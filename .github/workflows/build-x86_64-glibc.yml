@@ -111,6 +111,8 @@ jobs:
 
       #- name: Build hyprpaper
        # run: (/hostrepo/xbps-src -j$(nproc) -s -H ~/hostdir pkg hyprpaper)
+      - name: Build zen-browser
+        run: (/hostrepo/xbps-src -j$(nproc) -s -H ~/hostdir pkg zen-browser)
 
       # Sometimes xbps-src builds a bunch of other junk I don't want to be liable for distributing
       - name: Copy relevant packages to new directory to be packaged
