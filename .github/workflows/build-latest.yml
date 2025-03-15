@@ -46,6 +46,13 @@ jobs:
       - name: Prepare void-packages
         run: $SCRIPT_DIR/clone-and-prepare
 
+      - name: free space
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /opt/hostedtoolcache/CodeQL
+
       - name: Build packages
         run: $SCRIPT_DIR/build-packages
 
