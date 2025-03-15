@@ -46,17 +46,12 @@ jobs:
       - name: Prepare void-packages
         run: $SCRIPT_DIR/clone-and-prepare
 
-      - name: Check disk usage before build
+      - name: free space
         run: |
-          df -h
-          du -sh /home/runner || true
-
-      # - name: Free up space inside container
-      #   run: |
-      #    rm -rf /var/cache/*
-      #    rm -rf /tmp/*
-      #    rm -rf /home/builder/.cache || true
-      #    du -sh /var/cache /tmp /home/builder || true
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /opt/hostedtoolcache/CodeQL
          
       - name: Build packages
         run: $SCRIPT_DIR/build-packages
