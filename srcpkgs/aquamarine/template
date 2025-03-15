@@ -1,0 +1,15 @@
+# Template file for 'aquamarine'
+pkgname=aquamarine
+version=0.4.4
+revision=2
+build_style=cmake
+hostmakedepends="cmake pkgconf hyprwayland-scanner"
+makedepends="hyprutils MesaLib-devel hyprwayland-scanner libseat-devel libinput-devel wayland-devel wayland-protocols pixman-devel libdisplay-info-devel hwids"
+short_desc="Aquamarine is a very light linux rendering backend library"
+maintainer="Soheil <soheylsh1877@gmail.com>"
+license="LGPL-3.0-only"
+homepage="https://hyprland.org/hyprlang/index.html"
+changelog="https://github.com/hyprwm/aquamarine/releases"
+distfiles="https://github.com/hyprwm/aquamarine/archive/refs/tags/v${version}.tar.gz"
+checksum=2ac672bce27ac8a2f2d236582d49a2b6bbe243e9a7a5d06881e636607e897110
+
