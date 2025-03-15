@@ -46,11 +46,10 @@ jobs:
       - name: Prepare void-packages
         run: $SCRIPT_DIR/clone-and-prepare
 
-      - name: Check disk usage in runner home
+      - name: Check disk usage before build
         run: |
-         du -sh /home/runner || true
-
-        
+          df -h
+          du -sh /home/runner || true
 
       # - name: Free up space inside container
       #   run: |
