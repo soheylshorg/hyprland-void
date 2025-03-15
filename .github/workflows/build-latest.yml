@@ -46,12 +46,18 @@ jobs:
       - name: Prepare void-packages
         run: $SCRIPT_DIR/clone-and-prepare
 
-      - name: Free up space inside container
+      - name: Check disk usage before build
         run: |
-         rm -rf /var/cache/*
-         rm -rf /tmp/*
-         rm -rf /home/builder/.cache || true
-         du -sh /var/cache /tmp /home/builder || true
+          df -h
+          du -sh /var/cache /tmp /home/builder || true
+        
+
+      # - name: Free up space inside container
+      #   run: |
+      #    rm -rf /var/cache/*
+      #    rm -rf /tmp/*
+      #    rm -rf /home/builder/.cache || true
+      #    du -sh /var/cache /tmp /home/builder || true
          
       - name: Build packages
         run: $SCRIPT_DIR/build-packages
