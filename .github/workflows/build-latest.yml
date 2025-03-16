@@ -48,10 +48,9 @@ jobs:
 
       - name: free space
         run: |
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf /usr/local/lib/android
-          sudo rm -rf /opt/ghc
-          sudo rm -rf /opt/hostedtoolcache/CodeQL
+         sudo rm -rf /home/runner/runners/2.322.0/_diag/*
+         df -h
+
          
       - name: Build packages
         run: $SCRIPT_DIR/build-packages
