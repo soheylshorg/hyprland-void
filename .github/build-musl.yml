@@ -1,9 +1,9 @@
 name: "Build Latest Packages"
 
 on:
-  #push:
-   # branches:
-     # - master
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
