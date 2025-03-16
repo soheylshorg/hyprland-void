@@ -1,4 +1,4 @@
-name: "Build Latest Packages"
+name: "Build Latest Musl Packages"
 
 on:
   push:
