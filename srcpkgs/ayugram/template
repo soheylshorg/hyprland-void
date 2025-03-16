@@ -1,0 +1,17 @@
+# Template file for 'ayugram'
+pkgname=ayugram
+version=5.12.3
+revision=1
+build_style=cmake
+hostmakedepends="cmake pkgconf"
+makedepends="qt5-devel qt5-webengine-devel openssl-devel zlib-devel wayland-devel"
+short_desc="Ayugram - A secure messaging application"
+maintainer="Your Name <your.email@example.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/AyuGram/AyuGramDesktop"
+distfiles="https://github.com/AyuGram/AyuGramDesktop/archive/refs/tags/v${version}.tar.gz"
+checksum=c1613545297cca545c308dfb5846c225e6ac3870fcfba7c6bb0301bdb970bb75
+
+post_install() {
+  vlicense LICENSE
+}

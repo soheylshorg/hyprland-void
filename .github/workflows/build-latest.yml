@@ -40,17 +40,12 @@ jobs:
           git clone https://github.com/$REPO_OWNER/$REPO_NAME.git
           $SCRIPT_DIR/set-environment
 
-      # - name: Automatically generate a build order
-      #   run: $SCRIPT_DIR/generate-build-order.kts
+      - name: Automatically generate a build order
+        run: $SCRIPT_DIR/generate-build-order.kts
 
       - name: Prepare void-packages
         run: $SCRIPT_DIR/clone-and-prepare
 
-      - name: free space
-        run: |
-          df -h
-          ls /work
- 
       - name: Build packages
         run: $SCRIPT_DIR/build-packages
 
@@ -61,13 +56,6 @@ jobs:
           export XBPS_TARGET_ARCH=${{ env.TARGET_ARCH }}
           sudo -Eu builder $SCRIPT_DIR/index-packages
           sudo -Eu builder $SCRIPT_DIR/sign-packages
-
-      - name: Clean up after build
-        run: |
-          rm -rf /var/cache/*
-          rm -rf /tmp/*
-          rm -rf /home/builder/*
-          df -h
 
       - name: Push new packages to binary repository
         run: |
