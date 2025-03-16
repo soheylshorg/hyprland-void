@@ -40,18 +40,17 @@ jobs:
           git clone https://github.com/$REPO_OWNER/$REPO_NAME.git
           $SCRIPT_DIR/set-environment
 
-      - name: Automatically generate a build order
-        run: $SCRIPT_DIR/generate-build-order.kts
+      # - name: Automatically generate a build order
+      #   run: $SCRIPT_DIR/generate-build-order.kts
 
       - name: Prepare void-packages
         run: $SCRIPT_DIR/clone-and-prepare
 
       - name: free space
         run: |
-         sudo rm -rf /home/runner/runners/2.322.0/_diag/*
-         df -h
-
-         
+          df -h
+          ls /work
+ 
       - name: Build packages
         run: $SCRIPT_DIR/build-packages
 
