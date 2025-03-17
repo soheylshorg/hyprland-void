@@ -36,7 +36,7 @@ jobs:
 
       - name: Clone hyprland-void repo
         run: |
-          mkdir /work && cd /works
+          mkdir /work && cd /work
           git clone https://github.com/$REPO_OWNER/$REPO_NAME.git
           $SCRIPT_DIR/set-environment
 
