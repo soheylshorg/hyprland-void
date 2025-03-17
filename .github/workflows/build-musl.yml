@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build Hyprland
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     container:
       image: ghcr.io/void-linux/void-glibc-full:20250227R1
@@ -36,7 +36,7 @@ jobs:
 
       - name: Clone hyprland-void repo
         run: |
-          mkdir /work && cd /work
+          mkdir /work && cd /works
           git clone https://github.com/$REPO_OWNER/$REPO_NAME.git
           $SCRIPT_DIR/set-environment
 
