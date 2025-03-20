@@ -31,9 +31,6 @@ sudo xbps-install -S hyprland xdg-desktop-portal-hyprland
 Currently this repository provides binary packages for:
 
 - x86_64-glibc
-- x86_64-musl
-- aarch64-glibc
-- aarch64-musl
 
 Change the end of the url in `/etc/xbps.d/hyprland-void.conf` as appropriate with the above options.
 
