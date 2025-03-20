@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-BUILD="sudo -Eu builder /work/void-packages/xbps-src $BUILD_ARGS -j$(nproc) -s -H /work/hostdir pkg "
+BUILD="sudo -Eu builder /work/void-packages/xbps-src $BUILD_ARGS -j$(nproc) -s -H /work/hostdir pkg ayugram"
 
 COMMAND="
   while IFS= read -r package; do
